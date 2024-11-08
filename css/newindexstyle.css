@@ -818,6 +818,7 @@ body {
   padding: 0 20px;
   margin-bottom: 10px;
   text-align: left;
+  text-wrap: nowrap;
   /* Reduced margin to decrease the gap between sections */
 }
 
