@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overload++</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
+        html,
+        body {
+            margin: 0px;
+            overflow: hidden;
+            font-family: "oxanium";
+            background-image: url(../Assets/bg-gallery.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px); /* Adjusted to make space for footer */
+        }
+
+        h2 {
+            font-size: 10rem;
+            color: #fff;
+           
+        }
+
+        span {
+            display: inline-block;
+            opacity: 0;
+            /* Initially hide the letters */
+            animation: fadeIn 5s forwards;
+            /* Animation for fading in */
+        }
+
+        .footer {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-color: transparent; /* Optional: Add background color to footer */
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+           
+        }
+
+        .footer-bottom{
+            height: 20px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                /* Fade in effect */
+            }
+        }
+
+
+
+        
+  #id3_1 {
+    stroke-dasharray: 940px;
+    stroke-dashoffset: -940px;
+    animation: drawLine3 2.5s ease-in-out 0s forwards, flicker3 4s linear 4s infinite;
+  }
+
+  #id2_1 {
+    stroke-dasharray: 735px;
+    stroke-dashoffset: -735px;
+    animation: drawLine2 2.5s ease-in-out 0.5s forwards, flicker2 4s linear 4.5s infinite;
+  }
+
+  #id1_1 {
+    stroke-dasharray: 940px;
+    stroke-dashoffset: -940px;
+    animation: drawLine1 2.5s ease-in-out 1s forwards, flicker1 4s linear 5s infinite;
+  }
+
+  @keyframes drawLine1 {
+    0% {
+      stroke-dashoffset: -940px;
+    }
+
+    100% {
+      stroke-dashoffset: 0px;
+    }
+  }
+
+  @keyframes drawLine2 {
+    0% {
+      stroke-dashoffset: -735px;
+    }
+
+    100% {
+      stroke-dashoffset: 0px;
+    }
+  }
+
+  @keyframes drawLine3 {
+    0% {
+      stroke-dashoffset: -940px;
+    }
+
+    100% {
+      stroke-dashoffset: 0px;
+    }
+  }
+
+  @keyframes flicker1 {
+    0% {
+      stroke: #ff005d;
+    }
+
+    1% {
+      stroke: transparent;
+    }
+
+    3% {
+      stroke: transparent;
+    }
+
+    4% {
+      stroke: #ff005d;
+    }
+
+    6% {
+      stroke: #ff005d;
+    }
+
+    7% {
+      stroke: transparent;
+    }
+
+    13% {
+      stroke: transparent;
+    }
+
+    14% {
+      stroke: #ff005d;
+    }
+
+    100% {
+      stroke: #ff005d;
+    }
+  }
+
+  @keyframes flicker2 {
+    0% {
+      stroke: #ff005d;
+    }
+
+    50% {
+      stroke: #ff005d;
+    }
+
+    51% {
+      stroke: transparent;
+    }
+
+    61% {
+      stroke: transparent;
+    }
+
+    62% {
+      stroke: #ff005d;
+    }
+
+    100% {
+      stroke: #ff005d;
+    }
+  }
+
+  @keyframes flicker3 {
+    0% {
+      stroke: #ff005d;
+    }
+
+    1% {
+      stroke: transparent;
+    }
+
+    10% {
+      stroke: transparent;
+    }
+
+    11% {
+      stroke: #ff005d;
+    }
+
+    40% {
+      stroke: #ff005d;
+    }
+
+    41% {
+      stroke: transparent;
+    }
+
+    45% {
+      stroke: transparent;
+    }
+
+    46% {
+      stroke: #ff005d;
+    }
+
+    100% {
+      stroke: #ff005d;
+    }
+  }
+
+  @keyframes flicker4 {
+    0% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+
+    30% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+
+    31% {
+      color: #12000a;
+      text-shadow: 0px 0px 4px #12000a;
+    }
+
+    32% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+
+    36% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+
+    37% {
+      color: #12000a;
+      text-shadow: 0px 0px 4px #12000a;
+    }
+
+    41% {
+      color: #12000a;
+      text-shadow: 0px 0px 4px #12000a;
+    }
+
+    42% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+
+    85% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+
+    86% {
+      color: #12000a;
+      text-shadow: 0px 0px 4px #12000a;
+    }
+
+    95% {
+      color: #12000a;
+      text-shadow: 0px 0px 4px #12000a;
+    }
+
+    96% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+
+    100% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+  }
+
+  @keyframes fadeInText {
+    1% {
+      color: #12000a;
+      text-shadow: 0px 0px 4px #12000a;
+    }
+
+    70% {
+      color: #ff005d;
+      text-shadow: 0px 0px 14px #ff005d;
+    }
+
+    100% {
+      color: #ff005d;
+      text-shadow: 0px 0px 4px #ff005d;
+    }
+  }
+
+  @keyframes hueRotate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    50% {
+      filter: hue-rotate(-120deg);
+    }
+
+    100% {
+      filter: hue-rotate(0deg);
+    }
+  }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading">
+        <h2>
+            <span>C</span>
+            <span>o</span>
+            <span>m</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+            <span> </span>
+            <span>S</span>
+            <span>o</span>
+            <span>o</span>
+            <span>n</span>
+        </h2>
+    </div>
+
+    <div class="footer">
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            &copy; Copyright Turing ANDC UoD. All Rights Reserved
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to add a delay for each letter's animation
+        const spans = document.querySelectorAll('h2 span');
+        spans.forEach((span, index) => {
+            span.style.animationDelay = `${index * 0.1}s`; // Delay each letter by 0.1 seconds
+        });
+    </script>
+</body>
+
+</html>

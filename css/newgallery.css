@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oxanium";
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+
+/* Centering and styling the title and subtitle */
+.portfolio-section .section-title,
+.portfolio-section .section-subtitle {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Styling the title */
+.portfolio-section .section-title {
+    font-size: 4rem;
+    /* Adjust for title size */
+    color: #fff;
+}
+
+/* Styling the subtitle */
+.portfolio-section .section-subtitle {
+    font-size: 1.5rem;
+    color: #aaa;
+    font-weight: 400;
+}
+
+
+
+/* Dark background compatibility for the filters container */
+.portfolio-section .filters {
+    border: 2px solid #444;
+    /* Darker border */
+    border-radius: 100px;
+    padding: 2px;
+    margin: 0 auto 20px;
+    max-width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #222;
+    /* Dark background for the filter container */
+}
+
+/* Adjust filter link styles for dark background */
+.portfolio-section .filters a {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    color: #ccc;
+    /* Light gray for text */
+    font-size: 13px;
+    font-weight: 500;
+    opacity: .8;
+    padding: 8px 14px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Active filter style for better contrast */
+.portfolio-section .filters a.active {
+    opacity: 1;
+    border-radius: 100px;
+    background: #ff6e42;
+    /* Keep the accent color */
+    color: #fff;
+}
+
+/* Hover effect with higher contrast */
+.portfolio-section .filters a:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col-md-4, .col-lg-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    /* Other styles as needed */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.content-holder {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Example style for overlay */
+    padding: 10px;
+    color: #fff;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.subtitle {
+    font-size: 14px;
+}
+
+
+.portfolio-section .portfolio-container .portfolio-item {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.portfolio-section .portfolio-container .portfolio-item img {
+    width: 100%;
+    /* Make the image fill the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove bottom space/gap */
+}
+
+.portfolio-section .portfolio-container .portfolio-item .content-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 200%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 110, 66, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 15px;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.28s;
+    transition: all 0.28s;
+}
+
+.portfolio-section .portfolio-container .portfolio-item .content-holder .title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.portfolio-section .portfolio-container .portfolio-item .content-holder .subtitle {
+    font-weight: 500;
+    opacity: 1;
+}
+
+.portfolio-section .portfolio-container .portfolio-item:hover .content-holder {
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.blog {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-container {
+    text-align: center;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.blog-title {
+    color: #FFF;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.blog-subtitle {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.blog-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    min-height: 400px;
+}
+
+.blog-slider {
+    flex: 1;
+    position: relative;
+}
+
+.blog-slider .blog-text{
+    line-height: 350px;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    object-fit: cover;
+    object-position:unset;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transform: translateY(-50%);
+    transform: translateX(-60%);
+}
+
+.prev{
+    left: 10px;
+}
+.next {
+    right: -30px;
+    border-radius: 3px 0 0 3px;
+    
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dots-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.blog-text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    color: #fff;
+}
+
+.art-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.description {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.view-gallery-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.view-gallery-button:hover {
+    background-color: #d0175b;
+}
+
+
+.reverse-layout {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row-reverse; /* Reverse the order of children */
+}
