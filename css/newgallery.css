@@ -36,23 +36,39 @@ body {
 }
 
 
+@media screen and (max-width:1024px) {
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    .section-subtitle {
+    font-size: 0.9rem !important;
+    }
+
+}
+
+
+
+
 
 /* Dark background compatibility for the filters container */
 .portfolio-section .filters {
     border: 2px solid #444;
     /* Darker border */
     border-radius: 100px;
-    padding: 2px;
+    padding: 10px;
     margin: 0 auto 20px;
+    width: 50%;
     max-width: 400px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #222;
     /* Dark background for the filter container */
 }
@@ -76,7 +92,7 @@ body {
 .portfolio-section .filters a.active {
     opacity: 1;
     border-radius: 100px;
-    background: #ff6e42;
+    background: #ff0000;
     /* Keep the accent color */
     color: #fff;
 }
@@ -86,6 +102,19 @@ body {
     opacity: 1;
     color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+    .portfolio-section .filters a {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .portfolio-section .filters a {
+        font-size: 0.8rem;
+    }
+}
+
 
 
 
@@ -203,6 +232,13 @@ body {
     visibility: visible;
 }
 
+/* added to prevent overlapping with blog title */
+@media screen and (max-width: 800px) {
+    .portfolio-container {
+        margin-bottom: 100px;
+    }
+}
+
 .blog {
     width: 100%;
     min-height: 100vh;
@@ -247,11 +283,74 @@ body {
     line-height: 350px;
 }
 
+/* responsive blog title */
+@media screen and (max-width: 1024px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .blog-subtitle {
+        font-size: 0.8rem;
+    } 
+
+    .blog-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .blog-text p {
+        font-size: 0.8rem;
+    }
+
+    .view-gallery-button {
+        font-size: 0.9rem !important;
+        padding: 9px 15px;
+    }
+
+    .dot {
+        height: 9px !important;
+        width: 9px !important;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .blog-title {
+        font-size: 1.4rem;
+    }
+
+    .blog-subtitle {
+        font-size: 0.5rem;
+    } 
+
+    .blog-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .blog-text p {
+        font-size: 0.6rem;
+    }
+    
+    .blog-box {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .view-gallery-button {
+        font-size: 0.7rem !important;
+        padding: 8px 10px;
+    }
+
+    .dot {
+        height: 6px !important;
+        width: 5px !important;
+    }
+}
+
+
 .slideshow-container {
     max-width: 100%;
     position: relative;
     overflow: hidden;
-    height: 350px;
+    height: fit-content;
     object-fit: cover;
     object-position:unset;
     margin: auto;
@@ -319,7 +418,7 @@ body {
 
 .blog-text {
     flex: 1;
-    text-align: left;
+    text-align: justify;
     padding: 20px;
     color: #fff;
 }
@@ -339,7 +438,7 @@ body {
 .view-gallery-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #e91e63;
+    background-color: #e91e54;
     color: white;
     border: none;
     cursor: pointer;
@@ -349,7 +448,7 @@ body {
 }
 
 .view-gallery-button:hover {
-    background-color: #d0175b;
+    background-color: #d01727;
 }
 
 
