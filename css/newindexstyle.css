@@ -795,19 +795,19 @@ border-bottom: 2px solid #fff;
 }
 
 .Conference {
-  background-image: url(./Assets/Group\ Photo\ 1.JPG);
+  background-image: url(../Assets/workshop/Workshop.JPG);
 }
 
 .workshop {
-  background-image: url(./Assets/Workshop.JPG);
+  background-image: url(../Assets/Workshop/IMG_8674.webp);
 }
 
 .freshers {
-  background-image: url(./Assets/Freshers.JPG);
+  background-image: url(../Assets/Freshers/Freshers1.webp);
 }
 
 .fest {
-  background-image: url(./Assets/Fest.JPG);
+  background-image: url(../Assets/bck_para.jpg);
 }
 
 .event-name {
