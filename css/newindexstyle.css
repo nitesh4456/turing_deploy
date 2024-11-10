@@ -754,11 +754,11 @@ border-bottom: 2px solid #fff;
   width: 100%;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.85);
-  /* Slightly darker background for better contrast */
   border-radius: 10px;
   gap: 40px;
-  /* Spacing between sections */
 }
+
+
 
 .boxes {
   display: flex;
@@ -780,13 +780,26 @@ border-bottom: 2px solid #fff;
 
 .event-img {
   width: 50%;
-  height: 100%;
+  height: 400px;
   background-size: cover;
   background-position: center;
   border-radius: 8px 0 0 8px;
   /* Rounded corners on the left side */
   transition: transform 0.5s ease;
+  
   /* Smooth image hover effect */
+}
+
+@media screen and (max-width: 768px) {
+  .event-img {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+ 
+  
 }
 
 .event-img:hover {
@@ -794,19 +807,19 @@ border-bottom: 2px solid #fff;
   /* Slight zoom effect on hover */
 }
 
-.Conference {
-  background-image: url(../Assets/workshop/Workshop.JPG);
+.event-img.Conference {
+  background-image: url(../Assets/workshop/Workshop.jpg);
 }
 
-.workshop {
-  background-image: url(../Assets/Workshop/IMG_8674.webp);
+.event-img.workshop {
+  background-image: url(../Assets/Workshop/IMG_8674.jpg);
 }
 
-.freshers {
+.event-img.freshers {
   background-image: url(../Assets/Freshers/Freshers1.webp);
 }
 
-.fest {
+.event-img.fest {
   background-image: url(../Assets/bck_para.jpg);
 }
 
@@ -925,6 +938,11 @@ border-bottom: 2px solid #fff;
   .boxes {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .boxes.reverse-layout{
+    flex-direction: column-reverse;
   }
 
   .boxes .event-title {
