@@ -808,15 +808,15 @@ border-bottom: 2px solid #fff;
 }
 
 .event-img.Conference {
-  background-image: url(../Assets/workshop/Workshop.jpg);
+  background-image: url(../Assets/Workshop.jpg);
 }
 
 .event-img.workshop {
-  background-image: url(../Assets/Workshop/IMG_8674.jpg);
+  background-image: url(../Assets/IMG_8674.jpg);
 }
 
 .event-img.freshers {
-  background-image: url(../Assets/Freshers/Freshers1.webp);
+  background-image: url(../Assets/Freshers1.webp);
 }
 
 .event-img.fest {
