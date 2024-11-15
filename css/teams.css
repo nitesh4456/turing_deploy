@@ -7,7 +7,7 @@
 }
 
 body {
-  /*   background-image: url(../Assets/rb_117191.png);
+  /*   background-image: url(./Assets/rb_117191.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat; */
@@ -209,7 +209,7 @@ body {
   width: 35px;
   border-radius: 10px;
   font-size: 22px;
-  line-height: 35px;
+  line-height: 40px;
   color: #333;
 }
 
