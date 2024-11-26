@@ -1,0 +1,1055 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oxanium";
+  background-color: #000;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+
+#hero {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  background: url(../Assets/bck_para.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  animation: zoomIn 1s ease forwards;
+  z-index: 1;
+}
+
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;/* Overlay above the background */
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 90px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+  z-index: 3;
+}
+
+@media (max-width: 991px) {
+  #hero .hero-container {
+    top: 70px;
+  }
+}
+
+#hero h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#hero .overload {
+  font-size: 4rem;
+  color: rgb(4, 0, 255);
+}
+
+@media (max-width: 991px) {
+  #hero h1 {
+    font-size: 34px;
+  }
+}
+
+#hero p {
+  color: #ebebeb;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  #hero p {
+    font-size: 16px;
+  }
+}
+
+#hero .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(rgb(4, 0, 255) 50%, rgba(101, 111, 150, 0.15) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero .play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+#hero .play-btn:before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+  animation: pulsate-btn 2s;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(163, 163, 163, 0.4);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+#hero .play-btn:hover::after {
+  border-left: 15px solid rgb(4, 0, 255);
+  transform: scale(20);
+}
+
+#hero .play-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  animation: none;
+  border-radius: 0;
+}
+
+#hero .about-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #fff;
+  animation-delay: 0.8s;
+  border: 2px solid rgb(4, 0, 255);
+}
+
+#hero .about-btn:hover {
+  background: rgb(4, 0, 255);
+  color: #fff;
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#about {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../Assets/about-bg.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 80px 0 60px 0;
+  /* Increased padding for elegance */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  #about {
+    background-attachment: fixed;
+  }
+}
+
+#about:before {
+  content: "";
+  background: rgba(0, 0, 0, 0);
+  /* Darker overlay for better text contrast */
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#about .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  z-index: 3;
+  /* Set a max width for better alignment */
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.col-lg-6,
+.col-lg-3 {
+  padding: 20px;
+  /* Increased padding for better spacing */
+}
+
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 40px;
+  /* Increased font size for elegance */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* Added text shadow for depth */
+}
+
+#about h3 {
+  font-size: 20px;
+  /* Increased font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+#about p {
+  font-size: 16px;
+  /* Increased font size */
+  margin-bottom: 30px;
+  /* Increased margin for spacing */
+  color: #fff;
+  line-height: 1.6;
+  /* Improved line height for readability */
+}
+
+@media (max-width: 991px) {
+  #about h2 {
+    font-size: 32px;
+    /* Adjusted for smaller screens */
+  }
+
+  #about h3 {
+    font-size: 18px;
+    /* Adjusted for smaller screens */
+  }
+
+  #about p {
+    font-size: 14px;
+    /* Adjusted for smaller screens */
+  }
+}
+
+/*--------------------------------------------------------------
+  # Speakers Section
+  --------------------------------------------------------------*/
+#speakers {
+  width: 100%;
+  height: 100vh;
+  padding: 120px;
+
+}
+
+.speakers-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#speakers .section-header h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  /* White text for heading */
+}
+
+#speakers .section-header p {
+  color: #ddd;
+  /* Light gray for subheading */
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+#speakers .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  /* Optional: white border around circles */
+}
+
+#speakers .speaker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#speakers .speaker .details {
+  background: rgba(0, 0, 0, 0.76);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  /* White text for overlay details */
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+#speakers .speaker:hover .details {
+  opacity: 1;
+  bottom: 0;
+}
+
+#speakers .speaker .details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  /* White for speaker name */
+  margin: 5px 0;
+}
+
+#speakers .speaker .details p {
+  font-size: 12px;
+  font-style: italic;
+  color: #ddd;
+  /* Light gray for designation */
+  margin: 5px 0;
+}
+
+#speakers .speaker .details .social {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#speakers .speaker .details .social i {
+  color: #fff;
+  /* White for social icons */
+  font-size: 16px;
+}
+
+#speakers .speaker .details .social a:hover {
+  color: orange;
+  /* Orange on hover for contrast */
+}
+
+@media (min-width: 768px) {
+  #speakers .row {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #speakers .col-lg-3 {
+    max-width: 200px;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Schedule Section
+  --------------------------------------------------------------*/
+/* #schedule {
+  padding: 60px 0 60px 0;
+}
+
+#schedule .nav-tabs {
+  text-align: center;
+  margin: auto;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: 30px;
+}
+
+#schedule .nav-tabs li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#schedule .nav-tabs a {
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  background-color: black;
+  color: #fff;
+  padding: 10px 100px;
+}
+
+@media (max-width: 991px) {
+  #schedule .nav-tabs a {
+    padding: 8px 60px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  #schedule .nav-tabs a {
+    padding: 8px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  #schedule .nav-tabs a {
+    padding: 8px 30px;
+  }
+}
+
+#schedule .nav-tabs a.active {
+  background-color: orange;
+  color: #fff;
+}
+
+#schedule .sub-heading {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto 30px auto;
+}
+
+@media (min-width: 991px) {
+  #schedule .sub-heading {
+    width: 75%;
+  }
+}
+
+#schedule .tab-pane {
+  transition: ease-in-out 0.2s;
+}
+
+#schedule .schedule-item {
+  border-bottom: 1px solid #cad4f6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color ease-in-out 0.3s;
+}
+
+#schedule .schedule-item:hover {
+  background-color: #fff;
+}
+
+#schedule .schedule-item time {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+#schedule .schedule-item .speaker {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+#schedule .schedule-item .speaker img {
+  height: 100%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  transition: all ease-in-out 0.3s;
+}
+
+#schedule .schedule-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+#schedule .schedule-item h4 span {
+  font-style: italic;
+  color: rgb(100, 100, 100);
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#schedule .schedule-item p {
+  font-style: italic;
+  color: rgb(38, 38, 38);
+  margin-bottom: 0;
+}
+ */
+/*--------------------------------------------------------------
+  # Activities Section
+  --------------------------------------------------------------*/
+#activities {
+  padding: 150px;
+
+}
+
+#activities .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* Center-align section */
+}
+
+#activities .section-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #303030;
+}
+
+#activities .section-header p {
+  font-size: 16px;
+  color: #606060;
+  margin-bottom: 40px;
+}
+
+#activities .activity {
+  border: 1px solid #e0e5fa;
+  background: #fff;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Light shadow for better separation */
+  text-align: center;
+}
+
+#activities .activity:hover .activity-img img {
+  transform: scale(1.1);
+}
+
+#activities .activity-img {
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e5fa;
+}
+
+#activities .activity-img img {
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  /* Full width for consistency */
+  height: auto;
+}
+
+#activities h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #303030;
+}
+
+#activities a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#activities a:hover {
+  color: orange;
+}
+
+#activities .activity-line {
+  color: #606060;
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #activities .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #activities .col-lg-3 {
+    max-width: 23%;
+    /* Adjust width to fit four items in a row */
+  }
+}
+
+
+/*--------------------------------------------------------------
+  # Gallery Section
+  --------------------------------------------------------------*/
+#gallery {
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem 0;
+  background-color: #1a1a1a;
+}
+
+#gallery .section-header h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#gallery .section-header p {
+  font-size: 16px;
+  color: #e9eaed;
+  margin-bottom: 30px;
+}
+
+.gallery-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 300px;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.5);
+}
+
+
+.slide img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+
+.pagination-dots {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination-dots .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 1px solid orange;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dots .dot.active {
+  background-color: orange;
+}
+
+
+
+/* Animation to continuously scroll the slides */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+#register {
+  padding: 60px 0;
+  background-size: cover;
+  text-align: center;
+  /* Center the text in the section */
+}
+
+#register .container {
+  max-width: 800px;
+  /* Limit the width of the container */
+  margin: 0 auto;
+  /* Center the container */
+  text-align: center;
+}
+
+#register .section-header {
+  margin-bottom: 30px;
+  /* Space below the header */
+  text-align: center;
+}
+
+#register h2 {
+  font-size: 2.5rem;
+  /* Size of the title */
+  color: #333;
+  /* Dark text color */
+}
+
+#register p {
+  font-size: 1.2rem;
+  /* Size of the paragraph */
+  color: #666;
+  /* Lighter text color */
+}
+
+#register .register-btn {
+  display: inline-block; /* Make it behave like a button */
+  width: 150px;
+  align-self: center;
+  padding: 12px 0px; /* Add padding for a better button shape */
+  background-color: orange; /* Set background color */
+  color: #fff; /* Set text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 50px; /* Rounded corners */
+  font-weight: 600; /* Bold text */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#register .register-btn:hover {
+  background-color: darkorange; /* Change background on hover */
+  transform: scale(1.05); /* Slightly scale the button on hover */
+}
+
+#register:before {
+  content: "";
+  background: rgba(6, 12, 34, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 1024px) {
+  #register {
+    background-attachment: fixed;
+  }
+}
+
+
+/*--------------------------------------------------------------
+  # Sponsors Section
+  --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+  # Sponsors Section
+  --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+  # Sponsors Section
+  --------------------------------------------------------------*/
+#supporters {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  /* Increased padding for top and bottom, and added side padding */
+  background-color: #1a1a1a;
+}
+
+#supporters .section-header {
+  margin-bottom: 2rem;
+  /* Added margin for spacing between header and sponsors */
+}
+
+#supporters .section-header h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#supporters .section-header p {
+  font-size: 16px;
+  color: #e9eaed;
+  margin-bottom: 30px;
+}
+
+.sponsor-section {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  /* Responsive grid */
+  gap: 20px;
+  /* Space between items */
+  margin-top: 20px;
+}
+
+.sponsor-box {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Added box shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.sponsor-box img {
+  max-width: 80%;
+  
+  /* Adjusted for better fit */
+  max-height: 80%;
+  /* Adjusted for better fit */
+}
+
+.sponsor-box:hover {
+  transform: scale(1.05);
+  /* Slight scale effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* Darker shadow on hover */
+}
+
+#supporters .supporter-logo:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  /* Change border color on hover */
+}
+
+#supporters img {
+  transition: transform 0.4s ease-in-out;
+  /* Added transition for scaling */
+  border-radius: 0px 30px;
+  /* Adjusted for consistent rounding */
+}
+
+#supporters .supporter-logo:hover img {
+  transform: scale(1.1);
+  /* Scale image on hover */
+}
+
+@media(max-width: 924px) {
+  .sponsor-box {
+    margin-bottom: 15px;
+  }
+
+  #supporters .supporter-logo {
+    flex: 1 1 45%;
+    /* Responsive sizing */
+    max-width: 200px;
+    /* Limit maximum width */
+  }
+}
+
+@media(max-width: 480px) {
+  #supporters .supporter-logo {
+    flex: 1 1 90%;
+    /* Adjust for smaller screens */
+    max-width: none;
+    /* Remove max width for smaller devices */
+  }
+}
+/*--------------------------------------------------------------
+  # F.A.Q Section
+  --------------------------------------------------------------*/
+ /*--------------------------------------------------------------
+  # F.A.Q Section
+  --------------------------------------------------------------*/
+/* Main FAQ section styling */
+#faq {
+  padding: 60px 0;
+  background-color: black; /* Set background color to black */
+  color: #fff; /* Set text color to white for contrast */
+}
+
+/* Container styling for proper alignment and centering */
+#faq .container {
+  max-width: 1000px; /* Set a max width closer to the center alignment */
+  margin: 0 auto; /* Center the container */
+  padding: 0 15px; /* Add horizontal padding */
+}
+
+/* Header section alignment */
+#faq .section-header {
+  text-align: center; /* Center the section header */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+#faq .section-header h2 {
+  font-size: 36px; /* Large font for FAQ title */
+  font-weight: bold;
+  color: #fff;
+}
+
+#faq .section-header p {
+  color: rgb(150, 150, 170); /* Subtle color for subtext */
+  font-size: 18px;
+}
+/* Main FAQ section styling */
+.faq-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual FAQ item styling */
+.faq-list li {
+  border-bottom: 1px solid #ddd; /* Light gray border for separation */
+  margin-bottom: 15px; /* Space between FAQ items */
+  overflow: hidden; /* Prevent overflow for fixed height */
+  width: 1000px;
+}
+
+/* Question styling */
+.question {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between question text and icons */
+  align-items: center; /* Center vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 15px; /* Padding around the question */
+  border-radius: 5px; /* Rounded corners */
+  height: 60px; /* Fixed height for question container */
+  transition: background-color 0.3s; /* Smooth background transition */
+  box-shadow: none; /* Remove any shadow effects */
+}
+
+/* Hover effect for questions */
+.question:hover {
+  background-color: #333; /* Slightly darker background on hover */
+}
+
+/* Icon styling */
+.icon-show, .icon-close {
+  font-size: 18px; /* Size for icons */
+  color: #fff; /* Dark color for icons */
+}
+
+/* Collapsed state styling */
+.collapsed .icon-show {
+  display: inline; /* Show down arrow when collapsed */
+}
+
+.collapsed .icon-close {
+  display: none; /* Hide up arrow when collapsed */
+}
+
+/* Expanded state styling */
+.collapse.show .icon-show {
+  display: none; /* Hide down arrow when expanded */
+}
+
+.collapse.show .icon-close {
+  display: inline; /* Show up arrow when expanded */
+}
+
+/* Answer text styling */
+.collapse {
+  padding: 15px; /* Padding around the answer */
+  background-color: #f1f1f1; /* Light gray background for answers */
+  border-left: 4px solid #007bff; /* Blue left border for emphasis */
+  border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+  margin-top: -1px; /* Overlap border with question */
+  max-height: 200px; /* Fixed max height for answer container */
+  overflow: hidden; /* Prevent overflow */
+  transition: max-height 0.3s ease; /* Smooth transition for height */
+}
+
+/* Show answer when expanded */
+.collapse.show {
+  max-height: 200px; /* Allow for visible height when expanded */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .question {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .icon-show, .icon-close {
+    font-size: 16px; /* Adjust icon size for mobile */
+  }
+}
+
+.collapse {
+  display: none; /* Hide elements with this class */
+}
+
+.show {
+  display: block; /* Show elements with this class */
+}
+
+/*--------------------------------------------------------------
+  # Register Section
