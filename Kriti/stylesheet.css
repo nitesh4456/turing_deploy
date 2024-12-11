@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat";
+    font-family: "Oxanium";
     color: white;
 }
 
@@ -78,14 +78,16 @@ z-index: 10;
     font-size: 70px;
     font-weight: 600;
     position:relative;
+    top: 30%;
 }
 #page1 h1::before{
-    content:"THE ANNUAL TECHNICAL FESTIVAL";
+    /* content:"THE ANNUAL TECHNICAL FESTIVAL"; */
     /* content:"Turing Presents"; */
+    content:"Turing Presents";
     position:absolute;
     color: black;
-    top: -6px;
-    left:-6px;
+    top: -4px;
+    left:-4px;
     -webkit-text-stroke: 4px rgb(29 53 224);
     z-index: -1;
 }
@@ -107,7 +109,7 @@ z-index: 10;
 }
 
 #page2 {
-    height:100vh;
+    min-height:100vh;
     width: 100%;
     z-index: 10;
 
@@ -195,6 +197,100 @@ z-index: 10;
 }
 
 
+#speakers{
+height: 30vh;
+display:flex;
+align-items: center;
+justify-content: center;
+font-size: 50px;
+
+}
+
+
+#cards-container{
+    /* background-color: red; */
+    height: 60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+    border-radius: 900px;
+}
+
+.cards{
+    height: 80%;
+    width: 20%;
+    background-color: blue;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow:hidden;
+    transition: all ease 0.6s;
+}
+
+#card1{
+    background-image: url(/Kriti/Photo-video/principal.jpg);
+
+}
+#card2{
+    background-image: url(/Kriti/Photo-video/vibha\ maam.png);
+
+}
+#card3{
+    background-image: url(/Kriti/Photo-video/ck\ sir.png);
+
+}
+#card4{
+    background-image: url(/Kriti/Photo-video/nishu\ maam.png);
+}
 
 
 
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(29 53 224);
+    padding-top: 160px;
+    padding: 30px;
+    opacity:0;
+    transition:all ease 0.6s;
+}
+
+.overlay h4{
+    color:#000;
+    font-size:30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    color:black;
+    font-size: 20px;
+
+}
+
+.cards:hover .overlay{
+    opacity:1;
+
+}
+
+.cards:hover{
+    transform:rotate3d(1,1,0,20deg);
+}
+
+#blue-div{
+    height: 30vh;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+#blue-div{
+    height: 100%;
+}
