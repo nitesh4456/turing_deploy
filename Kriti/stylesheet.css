@@ -294,3 +294,89 @@ font-size: 50px;
 #blue-div{
     height: 100%;
 }
+
+#activity
+{
+    height: 80vh;
+    width: 100%;
+    /* background-color: red; */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    z-index:10;
+    padding:0 90px;
+    background-size: cover;
+    overflow: hidden;
+    transition:all ease 0.8s;
+
+}
+
+.swiper{
+    /* height: 400px; */
+    width: 100%;
+    max-width:500px;
+    border-radius: 30px;
+    overflow:hidden;
+    position:relative;
+}
+.slides{
+    display:flex;
+    transition:transform 0.3s ease-in-out;
+    cursor:grab;
+}
+
+.slides img{
+    width: 100%;
+    flex-shrink: 0;
+    height: 50vh;
+    border-radius: 30px;
+}
+
+
+.slides.dragging{
+    cursor:grabbing;
+    transition:none;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+
+
+
+
+#views{
+    text-align:right;
+    width:50%;
+}
+
+#views h3{
+    font-size: 60px;
+    font-weight:900;
+    margin-bottom:100px;
+}
+
+#views p{
+    font-size:20px;
+    text-align: right;
+    line-height: 26px;
+}
+
