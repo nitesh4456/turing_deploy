@@ -25,10 +25,6 @@ elem.addEventListener("mouseenter",function()
 })
 
 
-
-
-
-
 gsap.to("#nav",{
     backgroundColor:"Black",
     height:"100px",
@@ -172,3 +168,22 @@ function animation() {
 
 // Initialize the first dot as active
 updateDots();
+
+
+
+
+gsap.from("#page3 h1",{
+    y:50,
+    scrollTrigger:{
+        trigger:"#page4 h1",
+        scroller:"body",
+        // markers:true,
+        start:"top 55%",
+        end:"top 45%",
+        scrub:3 
+    }
+
+
+
+
+})
