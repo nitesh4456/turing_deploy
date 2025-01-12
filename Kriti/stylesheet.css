@@ -27,26 +27,185 @@ html, body {
     filter:blur(40px);
     z-index: 9;
 }
-#nav {
-    height: 130px;
-    /* background-color: black; */
-    width: 100%;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    padding: 0 80px;
-    position: fixed;
-    justify-content: flex-start;
-    z-index: 99;
-}
 
-#nav img {
+.navigation {
+    background-color: #000;
+  }
+  
+  .navigation > .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .navigation .navbar {
+    position: relative;
+  }
+  
+  .navigation .navbar .logo-toggle-container {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  .navigation .navbar .logo-toggle-container a {
+    display: block;
+  }
+  
+  .navigation .navbar .logo-toggle-container a img {
+    width: 150px;
     height: 150px;
-}
-
-#nav h4 {
+    margin-top: -15px;
+  }
+  
+  .navigation .menu {
+    color: #fff;
+    text-align: right;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .navigation .menu {
+      display: block !important;
+      height: auto !important;
+    }
+  }
+  .navigation .menu li {
+    display: inline-block;
+    padding: 50px 50px;
+    margin-top: 10px;
+  }
+  
+  .navigation .menu li a {
+    display: block;
+    padding: 0;
+    text-decoration: none;
     font-weight: 500;
-}
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .menu li a:hover,
+  .menu li.active a {
+    border-bottom: 2px solid #fff;
+  }
+  
+  .menu:first-of-type {
+    margin-left: 30px;
+  }
+  
+  .menu:first-of-type {
+    margin-right: 30px;
+  }
+  
+  .navigation .menu li:nth-child(1),
+  .navigation .menu li:nth-child(2),
+  .navigation .menu li:nth-child(3) {
+    float: left;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navigation .navbar .logo-toggle-container {
+      position: static;
+      transform: translateX(0%);
+    }
+  
+    .navigation .navbar .logo-toggle-container a {
+      width: 15%;
+    }
+  
+    .logo {
+      width: 90px !important; /* Resize logo for smaller screens */
+      height: 90px !important;
+      margin-top: 10px !important; /* Adds space between the logo and the top of the container */
+    }
+  
+    .navigation .navbar .logo-toggle-container .toggle-box {
+      position: absolute;
+      right: 10px;
+      top: 35px;
+      display: block;
+      width: 40px;
+      padding: 15px 9px;
+      border-radius: 5px;
+    }
+  
+    .navigation .navbar .logo-toggle-container .toggle-box span {
+      display: block;
+      max-width: 90%;
+      margin: auto;
+      height: 2px;
+      background-color: #fff;
+      margin-bottom: 4px;
+    }
+  
+    .navigation .navbar .logo-toggle-container .toggle-box span:last-child {
+      margin-bottom: 0;
+    }
+  
+    .navigation .menu {
+      text-align: center;
+      display: none;
+      margin-bottom: 15px;
+    }
+  
+    .navigation .menu li {
+      display: block;
+      float: none !important;
+      padding: 0 10px;
+      border-bottom: 1px solid #fff;
+    }
+  
+    .menu li a {
+      font-size: 0.8rem !important;
+    }
+  
+    .menu li:hover {
+      background-color: #000;
+    }
+  }
+  
+
+
+@media screen and (min-width: 1024px) {
+    /* Sticky Navbar */
+    .navigation.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(0,0,0,0.9); /* Adjust background color as needed */
+      transition: background-color 0.3s ease, padding 0.3s ease;
+    }
+  
+    .navigation.sticky .logo {
+      transition: width 0.3s ease, height 0.3s ease;
+    }
+  
+    .navigation.sticky .menu {
+      height: 60px;
+    }
+  
+    .navigation.sticky .menu li {
+      margin-top: 0px;
+      padding: 20px 50px;
+    }
+  }
+
+@media screen and (max-width: 1025px) {
+    .navigation .menu li {
+      padding: 50px 20px;
+    }
+  
+    .navigation.sticky .menu li {
+      margin-top: 0px;
+      padding: 20px 25px;
+    }
+  }
 
 video { 
     height: auto; 
@@ -78,7 +237,7 @@ z-index: 10;
     font-size: 80px;
     font-weight: 600;
     position:relative;
-    top: 30%;
+    top: 15%;
 }
 #page1 h1::before{
     /* content:"THE ANNUAL TECHNICAL FESTIVAL"; */
@@ -108,21 +267,21 @@ z-index: 10;
     z-index: -1;
 }
 #page1 #arrow{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     background-color:transparent;
     border:2px solid rgb(29 53 224);
     position:absolute;
     display:flex;
-    left:-2%;
-    bottom:0%;
+    left:-1%;
+    bottom:20%;
     align-items:center;
     justify-content: center;
     border-radius: 50%;
     transition: all ease 0.5s;
 }
 #page1 #arrow i{
-    font-size:50px;
+    font-size:60px;
     font-weight:100
 }
 
