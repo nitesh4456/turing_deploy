@@ -258,3 +258,43 @@ window.onscroll = function() {
                 menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
             });
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const arrow = document.getElementById('arrow');
+        
+            arrow.addEventListener('click', () => {
+                // Scroll to the next section (e.g., #page2)
+                const nextSection = document.getElementById('page2');
+                if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    console.error('Target section #page2 not found!');
+                }
+            });
+        });
+        
+
+
+
+
+
+
+
+
+
+
+//From here
+
+document.addEventListener('DOMContentLoaded', () => {
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+
+            // Toggle the active class for the current item
+            faqItem.classList.toggle('active');
+        });
+    });
+});
+
