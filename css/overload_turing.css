@@ -1,0 +1,615 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium";
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+*::selection{
+  background-color: white;
+  color:rgb(29 53 224);
+}
+
+body::-webkit-scrollbar{
+  display:block;
+  width:7px;
+  background-color: rgb(29 53 224);
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius:50px;
+}
+
+
+
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(29 53 224);
+    border-radius: 50%;
+    position:fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: rgba(29, 52, 224, 0.269);
+    border-radius: 50%;
+    position:fixed;
+    filter:blur(40px);
+    z-index: 9;
+}
+
+
+video { 
+    height: auto; 
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+}
+
+
+#main{
+position:relative;
+background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1{
+height: 100vh;
+width: 100%;
+position:relative;
+display:flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+z-index: 10;
+}
+
+#page1 h1{
+    font-size: 80px;
+    font-weight: 600;
+    position:relative;
+    top: 15%;
+}
+#page1 h1::before{
+    /* content:"THE ANNUAL TECHNICAL FESTIVAL"; */
+    /* content:"Turing Presents"; */
+    content:"Turing Presents";
+    position:absolute;
+    color: black;
+    top: -4px;
+    left:-4px;
+    /* -webkit-text-stroke: 4px rgb(29 53 224); */
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 50px;
+    font-weight: 500;
+    position:relative;
+}
+
+#page1 h2::before{
+    position:absolute;
+    content:"OVERLOAD ++";
+    color: black;
+    top: -6px;
+    left:-6px;
+    -webkit-text-stroke: 4px rgb(29 53 224);
+    z-index: -1;
+}
+#page1 #arrow{
+    height: 150px;
+    width: 150px;
+    background-color:transparent;
+    border:2px solid rgb(29 53 224);
+    position:absolute;
+    display:flex;
+    left:-1%;
+    bottom:20%;
+    align-items:center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+#page1 #arrow i{
+    font-size:60px;
+    font-weight:100
+}
+
+#page1 #arrow:hover{
+    scale:0.4;
+    background-color: rgb(29 53 224);
+}
+
+
+
+
+
+#page2 {
+    min-height:100vh;
+    width: 100%;
+    z-index: 10;
+
+}
+
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    position:relative;
+    z-index:10;
+
+}
+#scroller::-webkit-scrollbar{
+    display:none;
+}
+#scroller-in
+{
+    display:inline-block;
+    white-space: nowrap;
+    animation-name:scroll;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+#scroller h4{
+    font-size: 80px;
+    font-weight: 900;
+    margin-right: 10px;
+    -webkit-text-stroke: 3px rgb(29 53 224);
+    transition:all linear 0.4s;
+    color:transparent;
+}
+#scroller h4:hover{
+    color:rgb(29 53 224);
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translate(-100%);
+    }
+    
+}
+
+#about-us{
+    height:40vh;
+    width: 100%;
+    /* background-color: red; */
+    display:flex;
+    align-items: center;
+    justify-content: space-around;    
+    padding: 0 50px;
+    position:relative;
+    z-index:10;
+}
+
+#about-us img{
+    height: 200px;
+    width: 300px;
+    border-radius:20px;
+    object-fit: cover;
+}
+
+#content{
+    width: 50%;
+    text-align: center;
+    
+}
+
+#about-us h3{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+#content p{
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    
+}
+
+
+#speakers{
+height: 30vh;
+display:flex;
+align-items: center;
+justify-content: center;
+font-size: 50px;
+
+}
+
+
+#cards-container{
+    /* background-color: red; */
+    height: 60vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+    border-radius: 900px;
+}
+
+.cards{
+    height: 80%;
+    width: 20%;
+    background-color: blue;
+    perspective:1000px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow:hidden;
+    transition: all ease 0.3s;
+}
+
+#card1{
+    background-image: url(https://storage.googleapis.com/celestial-torus-431513-k8.appspot.com/TuringAssets/principal.jpg);
+
+}
+#card2{
+    background-image: url(https://storage.cloud.google.com/celestial-torus-431513-k8.appspot.com/TuringAssets/vibha%20maam.png);
+
+}
+#card3{
+    background-image: url(https://storage.googleapis.com/celestial-torus-431513-k8.appspot.com/TuringAssets/ck%20sir.png);
+
+}
+#card4{
+    background-image: url(https://storage.googleapis.com/celestial-torus-431513-k8.appspot.com/TuringAssets/nishu%20maam.png);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color:  black;
+    padding-top: 160px;
+    padding: 30px;
+    opacity:0;
+    transition:transform 0.6s ease;
+}
+
+.overlay h4{
+    color:white;
+    font-size:30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    color:white;
+    font-size: 20px;
+
+}
+
+.cards:hover .overlay{
+    opacity:1;
+}
+
+.cards:hover{
+    transform:rotate3d(180deg);
+}
+
+#blue-div{
+    height: 30vh;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+#blue-div{
+    height: 100%;
+}
+
+#activity
+{
+    height: 80vh;
+    width: 100%;
+    /* background-color: red; */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    z-index:10;
+    padding:0 90px;
+    background-size: cover;
+    overflow: hidden;
+    transition:all ease 0.8s;
+
+}
+
+.swiper{
+    /* height: 400px; */
+    width: 100%;
+    max-width:500px;
+    border-radius: 30px;
+    overflow:hidden;
+    position:relative;
+}
+.slides{
+    display:flex;
+    transition:transform 0.3s ease-in-out;
+    cursor:grab;
+}
+
+.slides img{
+    width: 100%;
+    flex-shrink: 0;
+    height: 50vh;
+    border-radius: 30px;
+}
+
+
+.slides.dragging{
+    cursor:grabbing;
+    transition:none;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+
+
+
+
+#views{
+    text-align:right;
+    width:50%;
+}
+
+#views h3{
+    font-size: 60px;
+    font-weight:900;
+    margin-bottom:50px;
+}
+
+#views p{
+    font-size:20px;
+    text-align:justify;
+    line-height: 30px;
+}
+
+#page3{
+    height: 30vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:70px;
+    position:relative;
+}
+
+.elem{
+    height: 70%;
+    width: 26%;
+    overflow:hidden;
+    border-radius: 20px;
+    position:relative; 
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color:grey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition:all ease 0.5s;
+    font-size: 40px;
+    color:black;
+    font-weight: 800;
+    position:absolute;
+    z-index: 10;
+}
+
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition:all ease 0.5s;
+    scale:1.1;
+}
+
+.elem:hover h2{
+    color:white;
+    background-color: transparent;
+}
+
+
+.elem:hover img{
+    scale:1;
+}
+
+#page3 h1{
+    font-size:90px;
+    position:absolute;
+    top:-15%;
+    font-weight: 900;
+    color:black;
+    -webkit-text-stroke:1px white;
+    font-family:'Times New Roman';
+
+}
+
+
+ /*--------------------------------------------------------------
+  # F.A.Q Section
+  --------------------------------------------------------------*/
+/* Main FAQ section styling */
+#faq {
+  padding: 60px 0;
+  background-color: black; /* Set background color to black */
+  color: #fff; /* Set text color to white for contrast */
+}
+
+/* Container styling for proper alignment and centering */
+#faq .container {
+  max-width: 1000px; /* Set a max width closer to the center alignment */
+  margin: 0 auto; /* Center the container */
+  padding: 0 15px; /* Add horizontal padding */
+}
+
+/* Header section alignment */
+#faq .section-header {
+  text-align: center; /* Center the section header */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+#faq .section-header h2 {
+  font-size: 36px; /* Large font for FAQ title */
+  font-weight: bold;
+  color: #fff;
+}
+
+#faq .section-header p {
+  color: rgb(150, 150, 170); /* Subtle color for subtext */
+  font-size: 18px;
+}
+/* Main FAQ section styling */
+.faq-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+/* Individual FAQ item styling */
+.faq-list li {
+  border-bottom: 1px solid #ddd; /* Light gray border for separation */
+  margin-bottom: 15px; /* Space between FAQ items */
+  overflow: hidden; /* Prevent overflow for fixed height */
+  width: 1000px;
+}
+
+/* Question styling */
+.question {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between question text and icons */
+  align-items: center; /* Center vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 15px; /* Padding around the question */
+  border-radius: 5px; /* Rounded corners */
+  height: 60px; /* Fixed height for question container */
+  transition: background-color 0.3s; /* Smooth background transition */
+  box-shadow: none; /* Remove any shadow effects */
+}
+
+/* Hover effect for questions */
+.question:hover {
+  background-color: #333; /* Slightly darker background on hover */
+}
+
+/* Icon styling */
+.icon-show, .icon-close {
+  font-size: 18px; /* Size for icons */
+  color: #fff; /* Dark color for icons */
+}
+
+/* Collapsed state styling */
+.collapsed .icon-show {
+  display: inline; /* Show down arrow when collapsed */
+}
+
+.collapsed .icon-close {
+  display: none; /* Hide up arrow when collapsed */
+}
+
+/* Expanded state styling */
+.collapse.show .icon-show {
+  display: none; /* Hide down arrow when expanded */
+}
+
+.collapse.show .icon-close {
+  display: inline; /* Show up arrow when expanded */
+}
+
+/* Answer text styling */
+.collapse {
+  padding: 15px; /* Padding around the answer */
+  background-color: #f1f1f1; /* Light gray background for answers */
+  border-left: 4px solid #007bff; /* Blue left border for emphasis */
+  border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+  margin-top: -1px; /* Overlap border with question */
+  max-height: 200px; /* Fixed max height for answer container */
+  overflow: hidden; /* Prevent overflow */
+  transition: max-height 0.3s ease; /* Smooth transition for height */
+}
+
+/* Show answer when expanded */
+.collapse.show {
+  max-height: 200px; /* Allow for visible height when expanded */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .question {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .icon-show, .icon-close {
+    font-size: 16px; /* Adjust icon size for mobile */
+  }
+}
+
+.collapse {
+  display: none; /* Hide elements with this class */
+}
+
+.show {
+  display: block; /* Show elements with this class */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
