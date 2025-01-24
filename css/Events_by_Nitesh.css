@@ -1,0 +1,356 @@
+    .body{
+        background-color: aqua;
+    }
+    .body-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /*background-color: aqua;*/
+    }
+    .bg{
+        font-size: 5px;
+        color: rgba(255, 255, 0,0.5);;
+        background-color:rgba(255, 255, 0,0.5);
+    }
+        /*color: aqua;*/
+    .heading_text h1 {
+        color: white;
+        font-size: 3rem;
+        text-align: left;
+        height: 50px;
+        width: 100%;
+    }
+    .heading_text h1 span {
+        color: rgb(4, 0, 255);
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .text-section {
+        max-width: 1200px;
+        text-align: justify;
+        padding: 40px;
+    }
+    .text-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: white;
+    }
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .image-grid img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .event-boxes {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        gap: 20px; /* Space between columns */
+        margin-top: 20px; /* Space above the boxes */
+    }
+    
+    .event-box {
+        background-color:rgba(42, 104, 99, 0.908); /* Background color for the boxes */
+        padding: 20px; /* Padding inside the boxes */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        text-align: center; /* Center the text */
+    }
+    
+    .event-box img {
+        max-width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Rounded corners for images */
+    }
+    
+    .event-box h2 {
+        color: white; /* Title color */
+        font-size: 24px; /* Title font size */
+        margin-bottom: 10px; /* Space below the title */
+    }
+    .past-event-images {
+        position: relative;
+        overflow: hidden; /* Hide images outside the container */
+    }
+    
+    .event-image {
+        display: none; /* Hide all images initially */
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: Rounded corners for images */
+        opacity: 0;
+        transition: opacity 2s ease;
+    }
+    
+    .event-image.active {
+        display: block; /* Show the active image */
+        opacity: 1;
+    }
+    
+    .description {
+        display: none; /* Hide all descriptions initially */
+    }
+    
+    .description.active {
+        display: block; /* Show the active description */
+    }
+    .dots-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .dot.active {
+        background-color: rgb(4, 0, 255); /* Active color */
+    }
+    /*CSS Cropping*/
+    /*.game{
+        margin: 0;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 80vw;
+        overflow: hidden;
+        background-color: rgb(11, 10, 10); /* Matches the game theme */
+        /*position: relative;
+    }
+    .game iframe{
+    
+        width: 100vw; /* Adjust as needed */
+        /*height:250px; /* Adjust as needed */
+        /*border: none;
+        position:absolute;
+        top: -150px; /* Moves the game to hide the unwanted parts */
+    /*}*/
+    .bg{
+        animation-duration: 1s;
+        animation-name: slidetop;
+    }
+    .heading_text {
+        animation-duration: 2s;
+        animation-name: slidein;
+    }
+    /*.game{
+        animation-duration: 3s;
+        animation-name: bounce;
+    }*/
+    @keyframes slidetop{
+        from {margin-top:100%}
+        to{margin-top: 0%}
+    }
+    @keyframes slidein {
+        from{margin-left:100%;}
+        to{margin-left: 0%;}
+    }
+    /*@keyframes bounce{
+        0%, 100% {
+        transform: translatex(0);
+        }
+        50% {
+        transform: translatex(-150px);
+        } 
+    }*/
+    .body-container .content .text-section p:hover{
+        font-size: 15px;
+        color: rgb(20, 165, 227);
+        /*background-color: aqua;*/
+    }
+    
+    
+    
+    /* responsivenes */
+    
+    @media screen and (max-width: 769px) {
+        .body-container {
+        padding: 60px;
+        }
+    
+        .heading_text h1 {
+        font-size: 2.5rem;
+        }
+    
+        .text-section p {
+        font-size: 0.8rem;
+        }
+    
+        .event-boxes {
+        justify-items: center;
+        gap: 0;
+        }
+    
+        .event-box {
+        width: 80%;
+        }
+    
+        .latest-events h2 {
+        font-size: 1.1rem;
+        }
+    
+        .past-events h2 {
+        font-size: 1.1rem;
+        }
+    
+        .dot {
+        height: 8px;
+        width: 8px;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .body-container {
+        padding: 40px;
+        }
+    
+        .heading_text h1 {
+        font-size: 1.4rem;
+        }
+    
+        .text-section {
+        padding: 20px;
+        }
+    
+        .text-section p {
+        font-size: 0.7rem;
+        }
+    
+        .event-boxes {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        }
+    
+        .event-box {
+        width: 80%;
+        }
+    
+        .latest-events h2 {
+        font-size: 0.9rem;
+        }
+    
+        .past-events h2 {
+        font-size: 0.9rem;
+        }
+    
+        .dot {
+        height: 6px;
+        width: 6px;
+        }
+    }
+    
+    .event-box img {
+        transition: transform 0.3s ease;
+    }
+    .event-box img:hover {
+        transform: scale(1.2);
+    }
+    
+    .footer-column:hover .icon{
+        transform: scale(1.5);
+    }
+    .footer-column .social-icons-footer img:hover{
+        transform: scale(1.5);
+    }
+    .footer-column .logo-container img:hover{
+        transition: transform 0.3s ease-in-out;
+        /*transform: scale(1.2);*/
+    }
+    .footer-column .logo-container img:hover{
+        transform: rotate(5deg);
+    }
+    
+    .daily_events{
+        font-size: 20px;
+        color:aqua;
+    }
+    .daily_events h2{
+        margin-left: 10vw;
+    }
+    .daily_events .button{
+        color: rgba(255, 255, 0,0.5);;
+    }
+    
+    .daily_events .button{
+        width: 80vw;
+        margin-left: 10vw;
+        padding-right: 10vw;
+        background-color:rgba(255, 255, 0,0.5);
+        font-size: 5px;
+        margin-bottom: 10px;
+    }
+    .daily_events .events_summary{
+        display: none;
+    }
+    .daily_events:hover{
+        font-size: 20px;
+    }
+    .daily_events:hover .events_summary {
+        margin-left: 10px;
+        display: contents;
+    }
+    
+    
+    .daily{
+        width: 100vw;
+        height:100vh;
+        background-color:rgba(0, 0, 0, 0.1);
+        border: 5px;
+        border-color: chocolate;
+    }
+    .box1{
+        margin-left: 5vw;
+        margin-right: 2vw;
+        display: inline-block;
+        background-color:rgba(0, 0, 0, 0.1);
+        width: 27vw;
+        height: 48vw;
+    }
+    .box1 img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    
+    }
+    .box2{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 27vw;
+        height: 48vw;
+    }
+    .box2 img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    
+    }
+    .box3{
+        margin-left: 2vw;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 27vw;
+        height: 48vw;
+    }
+    .box3 img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    
+    }
