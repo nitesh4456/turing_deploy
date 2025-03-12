@@ -265,6 +265,7 @@ font-size: 50px;
 
 #card1{
     background-image: url(https://storage.googleapis.com/celestial-torus-431513-k8.appspot.com/TuringAssets/principal.jpg);
+    /* background-image:url(/Assets/principal.jpg); */
 
 }
 #card2{
