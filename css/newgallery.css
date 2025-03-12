@@ -8,7 +8,8 @@
 
 body {
   font-family: "Oxanium";
-  background-color: #000;
+  background-color: #011301;
+  border-color: #e30f0f;
   overflow-x: hidden;
 }
 
@@ -163,6 +164,202 @@ body {
   margin: 5px;
   overflow: hidden;
   border-radius: 0;
+}
+
+/* EDIT ED CODE */
+/* Portfolio Container Styles */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Portfolio Item Styles */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add some margin to space out items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Styles */
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Add transition for shadow */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Add subtle shadow to the image */
+}
+
+/* Hover Effect on Image (Zoom In, Brightness Boost & Shadow) */
+.portfolio-item:hover img {
+  transform: scale(1.1); /* Zoom in the image */
+  filter: brightness(1.2); /* Slight brightness boost */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Hover Effect on Portfolio Item (Card) */
+.portfolio-item:hover {
+  transform: scale(1.05); /* Slightly enlarge the whole item */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+/* Description Box Styles */
+.portfolio-description {
+  background-color: rgba(248, 249, 250, 0.9); /* Slightly transparent background */
+  color: #333; /* Dark text color */
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+}
+
+/* Title and Description Styles */
+.portfolio-description h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #007bff; /* Color of title */
+  transition: color 0.3s ease;
+}
+
+.portfolio-description p {
+  font-size: 1rem;
+  margin: 0;
+  color: #555;
+}
+
+/* General Container */
+/* General Container */
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flexbox for easy row alignment */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;  /* Spacing between items */
+}
+
+/* Portfolio item container */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for portfolio items */
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Images */
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect for images */
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05);
+  filter: brightness(90%);
+}
+
+/* Column layouts for various screen sizes */
+.col-md-4 {
+  width: 33.33%;
+  padding: 10px; /* Reduced padding for tighter grid */
+}
+
+.col-lg-4 {
+  width: 33.33%;
+  padding: 10px; /* Adjusted padding for larger screens */
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+      width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .col-md-4 {
+      width: 50%;
+  }
+}
+
+/* Caption styling */
+.caption {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Display caption on hover */
+.portfolio-item:hover .caption {
+  opacity: 1;
+}
+
+/* Add smooth scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Hover on Image to Reveal Description */
+.portfolio-item:hover .portfolio-description {
+  opacity: 1;
+  background:rgb(212, 212, 203);
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Hover Shake Effect for Title and Description */
+.portfolio-item:hover .portfolio-description h5,
+.portfolio-item:hover .portfolio-description p {
+  animation: shake 0.6s ease-in-out;
+}
+
+/* Shake animation for description */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 767px) {
+  .portfolio-item img {
+      border-radius: 8px;
+  }
+
+  .portfolio-description {
+      padding: 12px;
+  }
 }
 
 .portfolio-section .portfolio-container .portfolio-item img {
