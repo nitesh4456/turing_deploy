@@ -62,12 +62,18 @@
         text-decoration: none;
         padding: 8px;
         border-radius: 10px;
+        transition: 0.3s ease;
+      }
+
+      p a:not(:hover) {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.1);
       }
 
       p a:hover {
         background-color: rgba(227, 149, 187, 0.615);
         color: black;
-        transition: 0.3s ease;
+        border: 1px solid transparent;
       }
 
       span {
@@ -388,8 +394,9 @@
         <span>o</span>
         <span>n</span>
       </h2>
+      <div style="display: flex;">
       <p>
-        <a href="./index.html">
+        <a href="./index.html" style="margin: 30px;">
           <span>H</span>
           <span>O</span>
           <span>M</span>
@@ -397,7 +404,7 @@
         </a>
       </p>
       <p>
-        <a href="./Overload-Turing.html" style="margin: 30px;">
+        <a href="./Overload2023.html" style="margin: 30px;">
           <span>O</span>
           <span>V</span>
           <span>E</span>
@@ -412,9 +419,10 @@
           <span>2</span>
           <span>0</span>
           <span>2</span>
-          <span>5</span>
+          <span>3</span>
         </a>
       </p>
+    </div>
     </div>
 
     <div class="footer">
@@ -433,3 +441,4 @@
     </script>
   </body>
 </html>
+
