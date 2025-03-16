@@ -251,6 +251,12 @@
     position: relative;
     overflow: hidden;
   }
+  /* #hero{
+    /* background-color: #00d9ff; 
+      background-image: url("../Assets/banner.png");
+      background-size: cover;
+      background-position: center;
+  } */
   
   .hero h1 {
     margin-bottom: 20px;
@@ -273,7 +279,7 @@
     margin-left: auto;
     margin-right: auto;
     box-shadow: var(--box-shadow);
-    background-image: url("./Assets/1.jpg");
+    /* background-image: url("./Assets/1.jpg"); */
   }
   
   .event-countdown {
@@ -356,16 +362,40 @@
     transform: translateY(-50%);
     color: #999;
   }
-  
-  .filter-options,
-  .time-filter {
+  .separator {
+    flex: 0 0 2px; /* Fix width */
+    height: 30px; /* Adjust height to match buttons */
+    background-color: #cc2424; /* Color of separator */
+    align-self: stretch;
+}
+
+  .filter-options{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .time-filter{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border:2px solid #0048ff;
+    border-radius: 5px;
+    padding: 5px 5px ;
+  }
   
-  .filter-btn,
+  .filter-btn{
+    padding: 8px 16px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
   .time-btn {
     padding: 8px 16px;
     border-radius: 30px;
@@ -540,6 +570,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  
   
   .stat-item {
     text-align: center;
@@ -1051,6 +1082,75 @@
     color: var(--success-color);
     margin-bottom: 20px;
   }
+
+
+
+  /* Lightbox Container */
+.lightbox {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Prevents image from touching edges on small screens */
+}
+
+
+/*******************Lightbox : events box pop-up*************************/
+/* Lightbox Image */
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile and Small Screens */
+@media screen and (max-width: 768px) {
+  .lightbox-content {
+      max-width: 95%;
+      max-height: 75vh; /* Slightly smaller for mobile */
+  }
+  .close {
+      top: 10px;
+      right: 15px;
+      font-size: 25px;
+  }
+}
+
+/* Very Small Screens (Phones) */
+@media screen and (max-width: 480px) {
+  .lightbox-content {
+      max-width: 98%;
+      max-height: 70vh;
+  }
+  .close {
+      font-size: 22px;
+  }
+  .time-filter{
+    width: 50%;
+  }
+}
+/*******************Lightbox : events box pop-up*************************/
+
   
   /* Responsive Styles */
   @media (max-width: 992px) {

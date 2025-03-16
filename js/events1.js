@@ -21,28 +21,173 @@
         // registrationOpen: true,
         // featured: true,
         // },
-        // {
+        // 
+        {
+            id: 0,
+            title: "Code Rush",
+            type: "overload",
+            date: "2025-03-20",
+            time: "11:30 AM - 1:00 PM",
+            duration: "1 day",
+            venue: "Seminar Hall",
+            address: "Acharya Narendra Dev College, University of Delhi",
+            description: "An exciting coding competition as part of Overload++, where participants will compete for a cash prize of ₹1.5K!",
+            image: "./Assets/overload_events/Code_Rush.jpg",
+            speakers: [],
+            status: "upcoming",
+            registrationOpen: true,
+            featured: true,
+            cashPrize: "₹1.5K",
+            registrationLink: "https://tr.ee/B20RjB"
+        },
             {
-                id: 0,
-                title: "Code Rush",
-                type: "coding competition",
+                id: 1,
+                title: "BGMI",
+                type: "overload",
                 date: "2025-03-20",
-                time: "11:30 AM - 1:00 PM",
+                time: "2:30 - 4:00 PM",
                 duration: "1 day",
                 venue: "Seminar Hall",
                 address: "Acharya Narendra Dev College, University of Delhi",
-                description: "An exciting coding competition as part of Overload++, where participants will compete for a cash prize of ₹1.5K.",
-                image: "./Assets/Code_Rush.jpg",
+                description: "Battle it out in the Overload++ BGMI Tournament and prove your gaming skills to claim victory! The winning squad takes home ₹1.5K!",
+                image: "./Assets/overload_events/BGMI.jpg",
                 speakers: [],
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹1.5K",
-                registrationLink: "your_google_form_link_here"
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
+            },
+            {
+                id: 2,
+                title: "Bug Hunt",
+                type: "overload",
+                date: "2025-03-20",
+                time: "11:30 AM - 1:00 PM",
+                duration: "1 day",
+                venue: "Room 09",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "Sharpen your debugging skills in Bug Hunt, part of Overload++, and hunt down coding errors for exciting rewards! Win up to ₹1.5K!",
+                image: "./Assets/overload_events/Bug_Hunt.jpg",
+                speakers: [],
+                status: "upcoming",
+                registrationOpen: true,
+                featured: true,
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
+            },
+            {
+                id: 3,
+                title: "Hackazzle",
+                type: "overload",
+                date: "2025-03-20",
+                time: "10:00 - 11:30 AM",
+                duration: "1 day",
+                venue: "Room 06",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "Hackazzle is a thrilling puzzle-solving event at Overload++ that challenges your brainpower and creativity. Cash prize: ₹1K!",
+                image: "./Assets/overload_events/Hackazzle.jpg",
+                speakers: [],
+                status: "upcoming",
+                registrationOpen: true,
+                featured: true,
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
+            },
+            {
+                id: 4,
+                title: "Sketch Bytes",
+                type: "overload",
+                date: "2025-03-20",
+                time: "2:30 - 4:00 PM",
+                duration: "1 day",
+                venue: "Room 09",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "Join Sketch Bytes at Overload++ for a fun and exciting drawing-based game! Showcase your creativity and quick thinking to win a cash prize of ₹1K!",
+                image: "./Assets/overload_events/Sketch_Bytes.jpg",
+                speakers: [],
+                status: "upcoming",
+                registrationOpen: true,
+                featured: true,
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
+            },
+            {
+                id: 5,
+                title: "Tech Quest",
+                type: "overload",
+                date: "2025-03-20",
+                time: "10:00 - 11:30 AM",
+                duration: "1 day",
+                venue: "Room 09",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "Test your tech knowledge in this Overload++ quiz competition and win exciting prizes! First place wins ₹1K!",
+                image: "./Assets/overload_events/Tech_Quest.jpg",
+                speakers: [],
+                status: "upcoming",
+                registrationOpen: true,
+                featured: true,
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
+            },
+            {
+                id: 6,
+                title: "Tech War Debate",
+                type: "overload",
+                date: "2025-03-20",
+                time: "10:00 - 11:30 PM",
+                duration: "1 day",
+                venue: "Seminar Hall",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "Tech War is a dynamic debate at Overload++ where students engage in intellectual discourse on tech topics, challenge viewpoints, and showcase critical thinking. Cash prize: ₹1.5K!",
+                image: "./Assets/overload_events/Tech_War.jpg",
+                speakers: [],
+                status: "upcoming",
+                registrationOpen: true,
+                featured: true,
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
+            },
+            {
+                id: 7,
+                title: "Tekken",
+                type: "overload",
+                date: "2025-03-20",
+                time: "1:30 - 2:30 PM",
+                duration: "1 day",
+                venue: "Gaming Zone",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "Join the Overload++ Tekken Tournament and fight your way to the top in this electrifying gaming event! Winner gets ₹1.5K!",
+                image: "./Assets/overload_events/Tekken.jpg",
+                speakers: [],
+                status: "upcoming",
+                registrationOpen: true,
+                featured: true,
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
+            },
+            {
+                id: 8,
+                title: "Artifact",
+                type: "overload",
+                date: "2025-03-20",
+                time: "2:30 PM",
+                duration: "1 day",
+                venue: "Seminar Hall",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "Artifact is a thrilling tech-driven treasure hunt at Overload++, where logic and problem-solving skills lead you to the lost artifact. Crack the clues and win ₹1K!",
+                image: "./Assets/overload_events/Artifact.jpg",
+                speakers: [],
+                status: "upcoming",
+                registrationOpen: true,
+                featured: true,
+                cashPrize: "₹XK",
+                registrationLink: "https://tr.ee/B20RjB"
             },
             
+            
         {
-                id: 1,
+                id: 9,
                 title: "IOT and Cloud Computing",
                 type: "workshop",
                 date: "2024-02-29",
@@ -56,12 +201,12 @@
                 speakers: [
                     { name: "Dr. Nikhil Rajput", role: "Assistant Professor, Ramanujan College, DU", image: "https://source.unsplash.com/random/100x100/?man" },
                 ],
-                status: "upcoming",
+                status: "past",
                 registrationOpen: true,
                 featured: true,
             },
         {
-                id: 2,
+                id: 10,
                 title: "Hands on work experience in Blockchain",
                 type: "workshop",
                 date: "2023-10-31",
@@ -75,12 +220,12 @@
                 speakers: [
                     { name: "Dr. Ihitiram Raza Khan", role: "Professor,Dept. Computer Sc & Engineering Jamia Hamdard Deemed University , New delhi", image: "https://source.unsplash.com/random/100x100/?man"  },
                 ],
-                status: "upcoming",
+                status: "past",
                 registrationOpen: true,
                 featured: true,
             },
             {
-                id: 3,
+                id: 11,
                 title: "Navigating the Digital Frontier & Cyber Security Awareness",
                 type: "seminar",
                 date: "2023-10-31",
@@ -94,32 +239,13 @@
                 speakers: [
                     { name: "Dr. Mohit Soni", role: "Founder and CEO, WhiteLint", image: "https://source.unsplash.com/random/100x100/?man" }
                 ],
-                status: "upcoming",
+                status: "past",
                 registrationOpen: false,
                 featured: false,
             },
             
             {
-                id: 4,
-                title: "Developing an Excellent Research Paper & Publication Ethics",
-                type: "webinar",
-                date: "2024-03-22",
-                time: "01:30 PM - 03:30 PM",
-                duration: "2 hours",
-                venue: "Google Meet (Online)",
-                address: "Virtual Event",
-                description:
-                    "A webinar on writing high-quality research papers while adhering to original research and publication ethics, organized by the Turing Society under the aegis of the DBT Star College scheme 2023-24.",
-                image: "./Assets/4.jpg",
-                speakers: [
-                    { name: "Dr. Narendra Nath Dalei", role: "Associate Professor, Department of Economics, Central University of Himachal Pradesh", image: "https://source.unsplash.com/random/100x100/?professor" }
-                ],
-                status: "upcoming",
-                registrationOpen: true,
-                featured: true,
-            },
-            {
-                id: 5,
+                id: 12,
                 title: "Use of Machine Learning in Video Streaming",
                 type: "technical talk",
                 date: "2024-03-17",
@@ -133,12 +259,12 @@
                 speakers: [
                     { name: "Mr. Sudesh Chandel", role: "Principal Data Engineer, AT&T India Pvt. Ltd, Hyderabad, India", image: "https://source.unsplash.com/random/100x100/?engineer" }
                 ],
-                status: "upcoming",
+                status: "past",
                 registrationOpen: true,
                 featured: true,
             },
             {
-                id: 6,
+                id: 13,
                 title: "Quantum Computing and Cybersecurity: A New Era of Challenges",
                 type: "technical talk",
                 date: "2024-03-16",
@@ -152,13 +278,13 @@
                 speakers: [
                     { name: "Dr. Nihar Rajan Roy", role: "Associate Professor, Dept. of Computer Science & Engineering, Sharda University, Greater Noida", image: "https://source.unsplash.com/random/100x100/?professor" }
                 ],
-                status: "upcoming",
+                status: "past",
                 registrationOpen: true,
                 featured: true,
             },
             
             {
-                id: 7,
+                id: 14,
                 title: "Data Dive: Surfing the Waves of AI Innovation",
                 type: "technical talk",
                 date: "2024-02-25",
@@ -172,12 +298,31 @@
                 speakers: [
                     { name: "Ms. Aakanksha Rehan", role: "Senior Data Scientist, Capgemini IT Pvt. Ltd.", image: "https://source.unsplash.com/random/100x100/?woman" }
                 ],
-                status: "upcoming",
+                status: "past",
                 registrationOpen: true,
                 featured: true,
             },
             {
-                id: 8,
+                id: 15,
+                title: "Developing an Excellent Research Paper & Publication Ethics",
+                type: "technical talk",
+                date: "2024-03-22",
+                time: "01:30 PM - 03:30 PM",
+                duration: "2 hours",
+                venue: "Google Meet (Online)",
+                address: "Virtual Event",
+                description:
+                    "A webinar on writing high-quality research papers while adhering to original research and publication ethics, organized by the Turing Society under the aegis of the DBT Star College scheme 2023-24.",
+                image: "./Assets/4.jpg",
+                speakers: [
+                    { name: "Dr. Narendra Nath Dalei", role: "Associate Professor, Department of Economics, Central University of Himachal Pradesh", image: "https://source.unsplash.com/random/100x100/?professor" }
+                ],
+                status: "past",
+                registrationOpen: true,
+                featured: true,
+            },
+            {
+                id: 16,
                 title: "Natural Language Processing Workshop",
                 type: "workshop",
                 date: "2024-11-12 to 2024-11-13",
@@ -191,29 +336,11 @@
                 speakers: [
                     { name: "Experts from University", role: "NLP Specialists", image: "https://source.unsplash.com/random/100x100/?man" }
                 ],
-                status: "upcoming",
+                status: "past",
                 registrationOpen: true,
                 featured: true,
             },
-            {
-                id: 9,
-                title: "Navigating the Digital Frontier & Cyber Security Awareness",
-                type: "seminar",
-                date: "2023-10-31",
-                time: "01:00 PM",
-                duration: "N/A",
-                venue: "Seminar Hall",
-                address: "Acharya Narendra Dev College, University of Delhi",
-                description:
-                    "A seminar on digital transformation and cybersecurity awareness under the aegis of the DBT Star College scheme 2023-24.",
-                image: "./Assets/3.jpg",
-                speakers: [
-                    { name: "Dr. Mohit Soni", role: "Founder and CEO, WhiteLint", image: "https://source.unsplash.com/random/100x100/?man" }
-                ],
-                status: "upcoming",
-                registrationOpen: false,
-                featured: false,
-            },
+            
     ]
     
     // Function to render events
@@ -233,12 +360,13 @@
             month: "long",
             day: "numeric",
         })
-    
+                        // <img src="${event.image}" target="_blank" alt="${event.title}" loading="lazy" class="clickable-image" data-src="${event.image}>
+
         const eventCard = document.createElement("div")
         eventCard.className = "event-card"
         eventCard.innerHTML = `
                 <div class="event-image">
-                    <img src="${event.image}" alt="${event.title}" loading="lazy">
+                    <img src="${event.image}" alt="${event.title}" loading="lazy" class="clickable-image" data-src="${decodeURIComponent(event.image)}">
                 </div>
                 <div class="event-type">${event.type.charAt(0).toUpperCase() + event.type.slice(1)}</div>
                 <div class="event-content">
@@ -269,6 +397,45 @@
             `
         eventsContainer.appendChild(eventCard)
         })
+
+        // // Add click event to open image in a new tab
+        // document.querySelectorAll(".clickable-image").forEach((img) => {
+        //     img.addEventListener("click", function () {
+        //         const imageUrl = decodeURIComponent(this.dataset.src);
+        //         window.open(imageUrl, "_blank");
+        //     });
+        // });
+
+        // === MODIFICATIONS START HERE ===
+
+        // Get Lightbox Elements
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".close");
+
+        // Add Click Event to Open Lightbox
+        document.querySelectorAll(".clickable-image").forEach((img) => {
+            img.addEventListener("click", function () {
+                lightbox.style.display = "flex";  // Show Lightbox
+                lightboxImg.src = this.dataset.src;  // Set Image Source
+            });
+        });
+
+        // Close Lightbox when Clicking 'X' Button
+        closeBtn.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        // Close Lightbox when Clicking Outside the Image
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+
+        // === MODIFICATIONS END HERE ===
+        
+        
     
         // Add event listeners to buttons
         document.querySelectorAll(".view-details").forEach((button) => {
