@@ -340,6 +340,30 @@
                 registrationOpen: true,
                 featured: true,
             },
+            {
+                id: 18,
+                title: "Real Time 3D",
+                type: "seminar",
+                date: "2025-02-21",
+                time: "1:00 PM - 2:30 PM",
+                duration: "1.5 hours",
+                venue: "Conference Room",
+                address: "Acharya Narendra Dev College, University of Delhi",
+                description: "A seminar on real-time 3D technology organized by the Department of Computer Science, Turing Society.",
+                image: "./Assets/real_time_3d.png",
+                speakers: [
+                    { 
+                        name: "Anupama Jain", 
+                        role: "Regional Sales Head, Aptech Ltd. (Arena Animation)", 
+                        image: "https://source.unsplash.com/random/100x100/?woman"
+                    }
+                ],
+                status: "past",
+                registrationOpen: true,
+                featured: true,
+                qrCodeLink: "ADD_REGISTRATION_LINK_HERE"
+            }
+            
             
     ]
     
