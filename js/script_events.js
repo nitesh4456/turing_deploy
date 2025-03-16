@@ -3,7 +3,7 @@
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
 
-        const parentContainer = document.getElementById("first_");
+        const parentContainer = document.getElementById("first_look");
         // Function to resize the canvas based on the parent container's size
         function resizeCanvas() {
 
