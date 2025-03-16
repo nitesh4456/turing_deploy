@@ -55,7 +55,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1.5K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             {
@@ -73,7 +73,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1.5K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             {
@@ -91,7 +91,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             {
@@ -109,7 +109,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             {
@@ -127,7 +127,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             {
@@ -145,7 +145,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1.5K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             {
@@ -163,7 +163,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1.5K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             {
@@ -181,7 +181,7 @@
                 status: "upcoming",
                 registrationOpen: true,
                 featured: true,
-                cashPrize: "₹XK",
+                cashPrize: "₹1K",
                 registrationLink: "https://tr.ee/B20RjB"
             },
             
